@@ -26,20 +26,20 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeRepo.findByName(name));
     }
 
-//    @GetMapping("/filter/{name}/{salary}")
-//    public ResponseEntity<List<Employee>> findEmpByNameAndSalary(@PathVariable String name, @PathVariable String salary){
-//        return ResponseEntity.ok(employeeRepo.findByNameAndSalary(name, salary));
-//    }
+    @GetMapping("/filter/{name}/{salary}")
+    public ResponseEntity<List<Employee>> findEmpByNameAndSalary(@PathVariable String name, @PathVariable String salary){
+        return ResponseEntity.ok(employeeRepo.findByNameAndSalary(name, salary));
+    }
 
 //    @GetMapping("/filter/{name}/{salary}")
 //    public ResponseEntity<List<Employee>> findEmpByNameStartingWithAndSalary(@PathVariable String name, @PathVariable String salary){
 //        return ResponseEntity.ok(employeeRepo.findByNameStartingWithAndSalary(name, salary));
 //    }
 
-    @GetMapping("/filter/{name}/{salary}")
-    public ResponseEntity<List<Employee>> findEmpByNameContainingAndSalaryGreaterThanEqual(@PathVariable String name, @PathVariable String salary) {
-        return ResponseEntity.ok(employeeRepo.findByNameContainingAndSalaryGreaterThanEqual(name, salary));
-    }
+//    @GetMapping("/filter/{name}/{salary}")
+//    public ResponseEntity<List<Employee>> findEmpByNameContainingAndSalaryGreaterThanEqual(@PathVariable String name, @PathVariable String salary) {
+//        return ResponseEntity.ok(employeeRepo.findByNameContainingAndSalaryGreaterThanEqual(name, salary));
+//    }
 
     @GetMapping("")
     public ResponseEntity<Iterable<Employee>> findAllEmps(){
